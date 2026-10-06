@@ -4,7 +4,8 @@
 - Repository: `Dlomotion/echohearts-web`
 - Role: `WEB_PRESENTATION`
 - Web/marketing/presentation repository. Build portfolio, landing pages, event pages, dashboards, browser visualizations, and web-facing project experiences here. Do not create a second Unreal runtime here.
-- Canon/contracts/Dex authority: **Dlomotion/Echohearts-Rebearth**\n- Executable UE5.8 runtime/build/evidence authority: **Dlomotion/ECHOHEARTS-REBEARTH-BUILD-**
+- Canon/contracts/Dex authority: **Dlomotion/Echohearts-Rebearth**
+- Executable UE5.8 runtime/build/evidence authority: **Dlomotion/ECHOHEARTS-REBEARTH-BUILD-**
 - Related repositories:
   - `Dlomotion/echohearts-web`
   - `Dlomotion/Echohearts-Ecokins`
