@@ -375,6 +375,15 @@
           <article class="phase"><span class="num">03</span><h3>Connected world</h3><ul><li>Four-player co-op</li><li>Guilds and shrines</li><li>Arena and card tactics</li><li>Cross-platform saves</li><li>Permitted item trade and authored raids</li></ul></article>
           <article class="phase"><span class="num">04</span><h3>Cosmic saga</h3><ul><li>Summoning Wars</li><li>Saviors of the Universe</li><li>Ancient Tech Wars</li><li>Heaven / Naveah twins</li><li>More planets and factions</li><li>Seasonal story arcs</li></ul></article>
         </div>
+        <section aria-labelledby="offlineFixtureStatus">
+          <div class="section-head"><h2 id="offlineFixtureStatus">Offline validation fixtures</h2><p><strong>PROTOTYPE · NOT YET UE5.8 VERIFIED</strong></p></div>
+          <article class="tech-card">
+            <p>Offline syntax/schema fixtures exist for universe metrics, Dex shape, and Training mission unlocks.</p>
+            <p>These fixtures support Copilot and future CI checks but do not prove Unreal runtime, gameplay, or packaging.</p>
+            <p>The Dex fixture demonstrates data shape; it does not replace or approve entries in the 125-ID Permanent Dex. Training fixture rows do not grant runtime mission unlocks.</p>
+            <p><a href="https://github.com/Dlomotion/Echohearts-Rebearth/issues/38">Canon issue #38: verification boundaries</a> · <a href="https://github.com/Dlomotion/ECHOHEARTS-REBEARTH-BUILD-/pull/26">BUILD PR #26: prototype fixtures</a></p>
+          </article>
+        </section>
         <div class="section-head"><h2>Technical spine</h2><p>The executable BUILD repository uses the Echohearts runtime module. Cards below are legacy interface proposals, not inspected implementations or proof of cloud-save correctness.</p></div>
         <div class="tech-stack">
           <article class="tech-card"><h3>Save Header</h3><p>Platform origin, slot, UTC timestamp, game version, and account reference drive deterministic conflict resolution.</p><code>FSaveGameHeader</code></article>
