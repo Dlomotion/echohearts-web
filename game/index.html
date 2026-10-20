@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b100e">
+  <meta name="description" content="A browser-playable Echo Egg care prototype for Echohearts: Rebearth.">
+  <title>Echo Egg Care Prototype — Echohearts: Rebearth</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="logic.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#game">Skip to prototype</a>
+  <header class="site-header">
+    <a class="brand" href="../">Echohearts: Rebearth</a>
+    <a class="back-link" href="../">Back to project overview</a>
+  </header>
+  <main class="wrap" id="game">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Browser prototype · presentation only</p>
+      <h1 id="page-title">Echo Egg Care</h1>
+      <p>Choose an egg family, keep both care meters in the marked band, and support a stable incubation.</p>
+      <p class="notice"><strong>Prototype boundary:</strong> Care ranges and rates are prototype tuning, not canon. Completion does not create a species, Dex ID, or rarity and does not prove Unreal Engine gameplay.</p>
+    </section>
+
+    <section class="game-panel" aria-labelledby="care-title">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Care loop</p>
+          <h2 id="care-title">Choose an Echo Egg</h2>
+        </div>
+        <span class="status-pill" id="egg-status" role="status" aria-live="polite">Incubating</span>
+      </div>
+
+      <fieldset class="family-picker">
+        <legend>Egg family</legend>
+        <div class="family-options">
+          <label><input type="radio" name="family" value="Aero" data-family checked> Aero</label>
+          <label><input type="radio" name="family" value="Terra" data-family> Terra</label>
+          <label><input type="radio" name="family" value="Verdant" data-family> Verdant</label>
+          <label><input type="radio" name="family" value="Radiant" data-family> Radiant</label>
+        </div>
+      </fieldset>
+
+      <div class="egg-summary">
+        <div class="egg-art" aria-hidden="true"><span></span></div>
+        <div>
+          <h3 id="family-name">Aero Echo Egg</h3>
+          <p id="family-copy">Care focuses on airflow and pressure stability.</p>
+        </div>
+      </div>
+
+      <div class="care-meters" role="group" aria-label="Echo Egg care meters">
+        <div class="meter-row">
+          <div class="meter-label"><span id="meter-name-0">Airflow</span><span id="meter-value-0">55%</span></div>
+          <div class="meter-track" role="meter" id="meter-0" aria-label="Airflow" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55" aria-valuetext="55 percent">
+            <span class="healthy-band" aria-hidden="true"></span><span class="meter-fill" id="fill-0" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="meter-row">
+          <div class="meter-label"><span id="meter-name-1">Pressure</span><span id="meter-value-1">55%</span></div>
+          <div class="meter-track" role="meter" id="meter-1" aria-label="Pressure" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55" aria-valuetext="55 percent">
+            <span class="healthy-band" aria-hidden="true"></span><span class="meter-fill" id="fill-1" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="band-key"><span aria-hidden="true"></span>Healthy care band: 40–70% (prototype tuning)</p>
+      </div>
+
+      <div class="blight-row">
+        <div class="meter-label"><span>Blight stress</span><span id="blight-value">0%</span></div>
+        <div class="meter-track blight-track" role="meter" id="blight-meter" aria-label="Blight stress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0 percent">
+          <span class="blight-fill" id="blight-fill" aria-hidden="true"></span>
+        </div>
+        <p id="blight-message" class="helper">Keep care balanced. At 60% stress, purify before incubation can continue.</p>
+      </div>
+
+      <div class="progress-section">
+        <div class="meter-label"><span>Incubation</span><span id="progress-value">0%</span></div>
+        <div class="progress-track" role="progressbar" id="incubation-progress" aria-label="Incubation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span id="progress-fill"></span>
+        </div>
+      </div>
+
+      <div class="actions" role="group" aria-label="Egg care actions">
+        <button type="button" class="action-button" id="tend-0">Tend airflow</button>
+        <button type="button" class="action-button" id="tend-1">Tend pressure</button>
+        <button type="button" class="action-button purify-button" id="purify">Purify Blight</button>
+        <button type="button" class="action-button secondary" id="pause">Pause care</button>
+      </div>
+      <p id="completion-message" class="completion-message" hidden>Care cycle complete. Any species identity or hatch outcome requires approved canon data; this prototype does not generate one.</p>
+      <p class="care-note">Eggs cannot be destroyed in this prototype. They are developmental care items, not capture devices or random rarity containers.</p>
+    </section>
+  </main>
+</body>
+</html>

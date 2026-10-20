@@ -1,0 +1,13 @@
+{
+  "name": "echohearts-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web presentation and supporting prototypes for Echohearts: Rebearth.",
+  "scripts": {
+    "start": "node game/server.js",
+    "test": "node --test game/tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
