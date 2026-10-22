@@ -14,3 +14,7 @@ Web implementations must consume approved Echohearts data/contracts without inve
 ## Verification boundary
 
 A working webpage or web prototype does not prove UE5.8 gameplay, save/network behavior, cross-play, AI, performance, or packaged-runtime completion. Report web validation separately from game-runtime evidence.
+
+## Local Echo Egg prototype
+
+Run `npm start` and open `http://127.0.0.1:8080/game/` to try the browser care-loop prototype. Run `npm test` for its isolated logic tests. Its meter ranges and rates are prototype tuning; completion does not generate a species, Dex ID, or rarity, and the prototype is not Unreal Engine runtime evidence.
