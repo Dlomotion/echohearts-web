@@ -6,6 +6,10 @@ const { readFile } = require('node:fs');
 
 const root = path.resolve(__dirname, '..');
 const routes = new Map([
+  ['/explorer/', ['explorer/index.html', 'text/html; charset=utf-8']],
+  ['/explorer/index.html', ['explorer/index.html', 'text/html; charset=utf-8']],
+  ['/explorer/exploration-core.js', ['explorer/exploration-core.js', 'text/javascript; charset=utf-8']],
+  ['/explorer/explorer-flight.js', ['explorer/explorer-flight.js', 'text/javascript; charset=utf-8']],
   ['/', ['index.html', 'text/html; charset=utf-8']],
   ['/game/', ['game/index.html', 'text/html; charset=utf-8']],
   ['/game/index.html', ['game/index.html', 'text/html; charset=utf-8']],
@@ -35,8 +39,8 @@ const server = http.createServer((request, response) => {
     return;
   }
 
-  if (pathname === '/game') {
-    response.writeHead(308, { Location: '/game/' });
+  if (pathname === '/game' || pathname === '/explorer') {
+    response.writeHead(308, { Location: pathname + '/' });
     response.end();
     return;
   }

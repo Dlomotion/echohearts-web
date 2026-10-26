@@ -5,7 +5,7 @@
   "description": "Web presentation and supporting prototypes for Echohearts: Rebearth.",
   "scripts": {
     "start": "node game/server.js",
-    "test": "node --test game/tests/*.test.js"
+    "test": "node --test game/tests/*.test.js explorer/tests/*.test.cjs"
   },
   "engines": {
     "node": ">=20"
